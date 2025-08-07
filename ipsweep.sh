@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if ['$1' == ""]
+if [ "$1" == "" ]
 then
 echo "You forgot an IP address!"
 echo "Syntax: ./ipsweep.sh 192.176.42"
 
 else
-for ip in `seq 1 254` ; do #for ip addresses from 1 to 254
+for ip in `seq 1 254`; do #for ip addresses from 1 to 254
 ping -c 1 $1.$ip | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" & 
 done
 fi
