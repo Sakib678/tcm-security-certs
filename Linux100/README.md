@@ -1,6 +1,7 @@
 # Linux100 - TCM Security
 
-This folder contains my notes and a bash script created whilst completing the **Linux 100: Fundamentals** course by TCM Security
+This folder contains my notes and a bash script created whilst completing the **Linux 100: Fundamentals** course by TCM Security.
+
 It can be found at the following link: https://academy.tcm-sec.com/p/linux-fundamentals
 
 ## About the Course
