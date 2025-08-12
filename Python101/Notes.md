@@ -185,3 +185,37 @@ function1()
 add_4 = lambda x: x + 4
 print(add_4(4))
 ```
+---
+
+## Python Package Manager
+- Functions that aren’t built into the standard library.  
+- A package contains a bundle of files required for a module.  
+- Provides prewritten Python functions for reuse.  
+
+---
+
+## Python Virtual Environment
+- An isolated environment to test Python projects.  
+- Keeps dependencies and packages separate from the global system.  
+
+---
+
+## Intro to `sys` Module
+- Provides functions to interact with the Python runtime environment.  
+- Can manipulate program execution and the interpreter itself.  
+- Documentation: [https://docs.python.org/3/library/sys.html](https://docs.python.org/3/library/sys.html)  
+
+---
+
+## Intro to `requests` Module
+- Simplifies making and processing HTTP requests in Python.  
+- Useful for interacting with APIs and automation.  
+- Documentation: [https://requests.readthedocs.io/en/latest/](https://requests.readthedocs.io/en/latest/)  
+
+---
+
+## Intro to `pwntools`
+- Useful for exploit development and CTF challenges.  
+- Allows direct interaction with shellcode and assembly code.  
+- Can send and receive data over the network.  
+- Documentation: [https://docs.pwntools.com/en/stable/](https://docs.pwntools.com/en/stable/)  
