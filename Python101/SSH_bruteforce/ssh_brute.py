@@ -12,13 +12,15 @@ Date: 13-08-2025
 """
 
 from pwn import *
-import paramiko
+import paramiko   
 import argparse
 
-parser = argparse.ArgumentParser()
-parser.add_argument("-H", "--host")  # Add target IP from command line
-parser.add_argument("-U", "--username") # Add SSH username from command line
-parser.add_argument("-W", "--wordlist") # Add wordlist from command line
+parser = argparse.ArgumentParser(
+	description = "SSH Brute Force Script"
+	)
+parser.add_argument("-H", "--host", help = 'Target IP address')  # Add target IP from command line
+parser.add_argument("-U", "--username", help = 'Target SSH Username') # Add SSH username from command line
+parser.add_argument("-W", "--wordlist", help = 'Path to password list file') # Add wordlist from command line
 args = parser.parse_args()
 
 # Target host details (127.0.0.1 for local testing)
