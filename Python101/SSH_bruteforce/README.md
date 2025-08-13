@@ -9,7 +9,7 @@ Attempts to brute force SSH credentials using a password list.
 ---
 
 ## Requirements
-- Python 3.x  
+- Python 3 
 - [pwntools](https://pypi.org/project/pwntools/)  
 - [paramiko](https://pypi.org/project/paramiko/)  
 
@@ -21,19 +21,25 @@ pip install pwntools paramiko
 ---
 
 ## Usage
-1. Set the target host and username in the script:
-```python
-host = "127.0.0.1"
-username = "notroot"
-```
+Run the script from the command line:
 
-2. Provide a password list in `best110.txt`.
-
-3. Run the script:
 ```bash
-python3 ssh_bruteforce.py
+python3 ssh_brute.py -H <host> -U <username> -W <wordlist>
 ```
 
+## Arguments
+- `-H, --host` : Target host IP
+
+- `-U, --username` : Target SSH username
+
+- `-W, --wordlist` : Path to password list file
+
+- `-h, --help` : Show this help message
+
+### Example
+```bash
+python3 ssh_brute.py -H 127.0.0.1 -U notroot -W best110.txt
+```
 **Output:**
 - `[>] Valid password found: 'password'` → correct password discovered  
 - `[X] Invalid password!` → authentication failed  
@@ -41,7 +47,6 @@ python3 ssh_bruteforce.py
 ---
 
 ## Notes
-- `attempts` counts how many passwords have been tried.  
 - Ensure an SSH server is running on the target host:
 ```bash
 sudo apt install openssh-server
