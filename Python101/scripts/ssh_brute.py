@@ -17,4 +17,6 @@ with open("best110.txt", "r") as password: #opening password file
 				break #breaks the loop if a correct password is found
 			response.close() #closes the connection if an incorrect password is tried and the connection is reopened to try another password
 
-		
+		except paramiko.ssh.exception.AuthenticationException:
+			print("[X] Invalid password!")
+		attempts += 1
