@@ -32,7 +32,6 @@ Each script is for **educational purposes and lab testing only**.
 | **Blind SQL Injection Hash Extractor** | Automates Boolean-based Blind SQL Injection to extract password hashes from a deliberately vulnerable web application.  |
 
 
-My notes are also available. 
 ---
 
 ## Example Usage
