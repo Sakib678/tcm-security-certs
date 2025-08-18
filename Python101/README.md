@@ -31,6 +31,8 @@ Each script is for **educational purposes and lab testing only**.
 | **Login Brute-Force Script** | Attempts to brute-force login credentials against a target web application using a username list and password wordlist.  |
 | **Blind SQL Injection Hash Extractor** | Automates Boolean-based Blind SQL Injection to extract password hashes from a deliberately vulnerable web application.  |
 
+
+My notes are also available. 
 ---
 
 ## Example Usage
